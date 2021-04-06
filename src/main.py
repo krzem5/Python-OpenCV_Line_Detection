@@ -20,7 +20,7 @@ while True:
             x2=int(x0-1000*(-b))
             y2=int(y0-1000*(a))
             cv2.line(img,(x1,y1),(x2,y2),(0,0,255),2)
-    except:
+    except IndexError:
         pass
     cv2.imshow('img',img)
     k=cv2.waitKey(30) & 0xff
